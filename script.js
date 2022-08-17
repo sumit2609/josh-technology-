@@ -86,47 +86,60 @@ playbutton.addEventListener('click',function(){
 addEventListener('load',()=>{
     const slider=document.querySelector('.top-deals-slider');
     const sliderimg = document.querySelectorAll('.top-deals-slider li');
+    console.log(sliderimg[0].id)
     const leftbtn=document.querySelector('.left-btn');
     const rightbtn=document.querySelector('.right-btn');
 
-    const temp=slider.clientWidth/100;let counter=1;
-
-    console.log(temp);
+    const temp=slider.clientWidth/100;
+    let counter=1;
+    // console.log(temp);
 
     const size =sliderimg[0].clientWidth+(temp*2);
     slider.style.transform='translateX('+(-size*counter)+'px)';
 
     var timer=setInterval(function(){
+        // console.log(timer)
+        
         counter++;
+        counter = counter%8;
         slider.style.transition="transform .4s ease-in-out";
         slider.style.transform='translateX('+(-size*counter)+'px)';
     },3000);
 
     rightbtn.addEventListener('click',()=>{
+        console.log("rightclick")
         clearTimeout(timer);
         if(counter+3>=sliderimg.length)return;
         slider.style.transition='transform .4s ease-in-out';
         counter++;
+        counter = counter%8;
         slider.style.transform='translateX('+(-size*counter)+'px)';
         timer=setInterval(function(){
         counter++;
+        counter = counter%8;
         slider.style.transition="transform .4s ease-in-out";
         slider.style.transform='translateX('+(-size*counter)+'px)';
         },3000);
     });
     leftbtn.addEventListener('click',()=>{
+        console.log("leftclick")
         clearTimeout(timer);
         if(counter<=0)return;
         slider.style.transition='transform .4s ease-in-out';
         counter--;
+        counter = counter%8;
         slider.style.transform='translateX('+(-size*counter)+'px)';
         timer=setInterval(function(){
         counter++;
+        counter = counter%8;
         slider.style.transition="transform .4s ease-in-out";
         slider.style.transform='translateX('+(-size*counter)+'px)';
         },3000);
     });
     slider.addEventListener('transitionend',()=>{
+        console.log(counter)
+        console.log(sliderimg[counter+2].id)
+        // counter = counter%;
         if(sliderimg[counter+2].id==='firstdeal'){
             slider.style.transition="none";
             counter=1;
