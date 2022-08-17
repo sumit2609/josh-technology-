@@ -11,6 +11,7 @@
 }
 
 /* navbar */
+/* ==============================navbar=============================== */
 
 .navbar{
     display: flex;
@@ -68,6 +69,8 @@
 }
 
 /* carousal */
+
+/* ====================================carousal===================================== */
 
 .carousal{
     width:100%;
@@ -137,6 +140,8 @@
 .carousal-right{
     background-color: #1AC073;
 }
+
+/* ==================================home container======================================= */
 
 /* home container */
 .heading{
@@ -232,6 +237,7 @@
 
 /* home container end */
 
+/* ====================================popular items================================== */
 
 .services {
     background: linear-gradient(to bottom,  #FAFAFA 0%,#FAFAFA 50%,#C7EACC 50%, #C7EACC 100%);
@@ -320,6 +326,7 @@
 }
 
 /* request dish modal */
+
 .dish-modal-bg{
     position: fixed;
     width:100%;
@@ -383,6 +390,7 @@
 }
 
 /* cart modal */
+/* ==================================cart modal========================================== */
 .cart-modal-bg{
     position: fixed;
     width:100%;
@@ -433,7 +441,7 @@
 }
 
 /* form */
-
+/* ====================================forms============================== */
 .form{
     display: flex;
     justify-content: center;
@@ -534,7 +542,7 @@
 }
 
 /* footer */
-
+/* =============================================footer========================================= */
 .footer{
     display: flex;
     flex-direction: column;
@@ -612,6 +620,9 @@
     /* margin-bottom: 10px; */
     border: 1px solid #FFFFFF;
 }
+
+
+/* ========================================slider=========================================== */
 
 
 .top-deals{

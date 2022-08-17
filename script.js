@@ -1,4 +1,4 @@
-//dish-modal-button
+// ======================dish modal button==============================
 var dishmodalbtn = document.querySelector('.dish-button');
 var dishmodalbg = document.querySelector('.dish-modal-bg');
 var modalClose = document.querySelector('.modal-close');
@@ -35,7 +35,8 @@ submitRequest.addEventListener('click',function(){
     dishmodalbg.classList.remove('dish-bg-active');
 });
 
-// cart-modal-button
+// ==============================cart modal button=====================================
+
 var cartbutton = document.querySelector('#cart-button');
 var cartmodalbg = document.querySelector('.cart-modal-bg')
 var backtomenu = document.querySelector('.cart-button');
@@ -63,6 +64,7 @@ cartmodalclose.addEventListener('click',function(){
 });
 
 // iframe video
+// ====================================iframe video=====================================
 
 var playbutton = document.querySelector('.iframe-img2');
 var iframeimg =  document.querySelector('.iframe-image');
@@ -72,12 +74,14 @@ playbutton.addEventListener('click',function(){
     console.log("hello")
     playbutton.classList.add('displaynone')
     iframeimg.classList.add('displaynone')
-    // document.getElementsByClassName('iframe').src += "?autoplay=1";
+    console.log(document.getElementsByClassName('iframe')[0].src)
+    document.getElementsByClassName('iframe')[0].src += "?autoplay=1";
+    console.log(document.getElementsByClassName('iframe')[0].src)
     iframe.classList.add('displayblock');
 })
 
 
-// slider
+// ==================================slider=================================
 
 addEventListener('load',()=>{
     const slider=document.querySelector('.top-deals-slider');
